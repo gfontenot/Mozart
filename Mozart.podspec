@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   }
   spec.social_media_url = 'http://twitter.com/gfontenot'
   spec.source = { :git => 'https://github.com/gfontenot/Mozart.git', :tag => "v#{spec.version}" }
-  spec.source_files = 'Source/**/*.{h,swift}'
+  spec.source_files = 'Sources/**/*.swift'
   spec.requires_arc = true
   spec.ios.deployment_target = '8.0'
   spec.osx.deployment_target = '10.9'
