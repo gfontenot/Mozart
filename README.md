@@ -3,6 +3,45 @@
 
 Beautiful function composition for Swift
 
+Mozart defines two new operators:
+
+`•`: The function composition operator. This takes two functions and returns
+a new function that is the composition of the original two. It essentially
+chains functions together. When reading it in code, you can pronounce it as
+"after".
+
+```swift
+func addTwo(_ x: Int) -> Int {
+  return x + 2
+}
+
+func multiplyThree(_ x: Int) -> Int {
+  return x * 3
+}
+
+let addThenMultiply = multiplyThree • addTwo
+let y = addThenMultiply(2) // y = 12
+```
+
+We are also exporting a named `compose` function that works the same:
+
+```swift
+let addThenMultiply = compose(multiplyThree, addTwo)
+let y = addThenMultiply(2) // y = 12
+```
+
+`|>`: The forward pipe operator. This takes a value on the left and a function
+that accepts that value on the right, and applies the function to the value.
+This is useful for doing things like chaining method calls. When reading it in
+code, you can pronounce it as "and then".
+
+```swift
+import UIKit
+
+let wrappedViewController = MyCustomViewController(foo: Foo()) // Create a view controller
+  |> UINavigationController.init // And then wrap it in a navigation controller
+```
+
 ## Version Compatibility
 
 Note that we're aggressive about pushing `master` forward along with new
@@ -15,7 +54,7 @@ Here is the current Swift compatibility breakdown:
 
 | Swift Version | Mozart Version |
 | ------------- | -------------- |
-| 3.X           | master         |
+| 3.X           | 1.X, master    |
 
 ## Installation ##
 
