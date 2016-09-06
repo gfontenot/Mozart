@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'Mozart'
-  spec.version = '1.0.0'
+  spec.version = '1.0.1'
   spec.summary = 'Beautiful function composition for Swift'
   spec.homepage = 'https://github.com/gfontenot/Mozart'
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
