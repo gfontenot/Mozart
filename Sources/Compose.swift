@@ -1,9 +1,9 @@
-precedencegroup CompositionPrecedence {
+precedencegroup MozartCompositionPrecedence {
     associativity: right
     higherThan: BitwiseShiftPrecedence
 }
 
-infix operator • : CompositionPrecedence
+infix operator • : MozartCompositionPrecedence
 public func • <T, U, V>(f: @escaping (U) -> V, g: @escaping (T) -> U) -> (T) -> V {
   return compose(f, g)
 }
