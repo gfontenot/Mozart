@@ -1,6 +1,6 @@
 precedencegroup MozartCompositionPrecedence {
-    associativity: right
-    higherThan: BitwiseShiftPrecedence
+  associativity: right
+  higherThan: BitwiseShiftPrecedence
 }
 
 infix operator • : MozartCompositionPrecedence
