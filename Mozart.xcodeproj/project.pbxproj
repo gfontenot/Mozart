@@ -92,7 +92,8 @@
 				F89AAC851D74CE8D00184D08 /* Compose.swift */,
 				F89AAC861D74CE8D00184D08 /* Pipe.swift */,
 			);
-			path = Sources;
+			name = Sources;
+			path = Sources/Mozart;
 			sourceTree = "<group>";
 		};
 		F88630731B4EF9B200F53969 /* Resources */ = {
